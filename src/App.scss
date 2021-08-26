@@ -1,0 +1,321 @@
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+  background: #efefef;
+  font: normal normal normal 16px/26px -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* button generic style */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.disabled {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  &.gradient-btn {
+    height: 3.125rem;
+    width: 100%;
+    border-radius: 0.4375rem;
+    border: 0 solid transparent;
+    color: #fff;
+    background-position: right;
+    background-size: 200% auto;
+    transition: all ease 0.5s;
+    background-image: linear-gradient(
+      275deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(35, 35, 207, 1) 0%,
+      rgba(0, 201, 255, 1) 50%
+    );
+    &:hover {
+      background-position: left;
+      background-image: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(35, 35, 207, 1) 0%,
+        rgba(0, 201, 255, 1) 50%
+      );
+    }
+  }
+}
+
+/* Navbar css */
+section#navbar {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-bottom: 1px solid rgba(2, 2, 2, 0.3);
+  box-shadow: 0 0 5px rgba(2, 2, 2, 0.3);
+  background: #fff;
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+  a {
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 600;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      font-size: 36px;
+      line-height: 46px;
+    }
+  }
+  .logo-section {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    svg {
+      font-size: 30px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+    .cart-count {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 0;
+      background: #e27f4b;
+      color: #fff;
+      width: 20px;
+      height: 20px;
+      border-radius: 49%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+/* Product page css */
+section#products {
+  padding: 40px;
+  max-width: 1366px;
+  margin: 0 auto;
+  background: #fff;
+
+  @media (max-width: 767px) {
+    padding: 25px 0 0;
+    min-height: calc(100vh - 80px);
+  }
+
+  input {
+    width: 250px;
+    height: 50px;
+    border-radius: 7px;
+    background: #fff;
+    position: relative;
+    padding-left: 10px;
+    &:focus {
+      outline: #cf9775;
+    }
+    @media (max-width: 767px) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .search-icon {
+    margin-left: -30px;
+    position: relative;
+    @media (max-width: 767px) {
+      margin-left: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(600%, -50%);
+    }
+  }
+  .col-12:first-child {
+    .cart-item {
+      border-radius: 12px 12px 0 0;
+      @media (max-width: 767px) {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .col-12 {
+    padding: 0;
+  }
+  .cart-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 160px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(2, 2, 2, 0.3);
+    align-items: center;
+    background: #fff;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 15px;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      height: 80%;
+      @media (max-width: 767px) {
+        height: 80px;
+      }
+    }
+    .product-name {
+      font-size: 26px;
+      line-height: 36px;
+      font-weight: 600;
+    }
+    .product-price {
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+    }
+    button {
+      border: 1px solid #cf9775;
+      padding: 10px 15px;
+      border-radius: 12px;
+      width: 150px;
+      background: transparent;
+      font-size: 16px;
+      font-weight: 500;
+      &:hover {
+        color: #fff;
+        background: #cf9775;
+      }
+    }
+  }
+}
+
+/* Cart Page css */
+section#cart {
+  padding: 40px;
+  max-width: 1366px;
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+  min-height: calc(100vh - 80px - 156px);
+  @media (max-width: 767px) {
+    padding: 25px 0 156px 0;
+  }
+
+  .clear-cart {
+    width: 140px;
+    height: 50px;
+    border: 1px solid #cf9775;
+    background: transparent;
+    border-radius: 12px;
+    margin: 0 15px;
+    svg {
+      margin-left: 10px;
+    }
+    &:hover {
+      background: #cf9775;
+      color: #fff;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+  .cart-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 160px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(2, 2, 2, 0.3);
+    align-items: center;
+    background: #fff;
+    &.max-quantity {
+      opacity: 0.7;
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 15px;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      height: 80%;
+      @media (max-width: 767px) {
+        height: 80px;
+      }
+    }
+    .product-name {
+      font-size: 26px;
+      line-height: 36px;
+      font-weight: 600;
+    }
+    .product-price {
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+    }
+    .quantity {
+      margin: 0 5px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .cart-action {
+      background: rgba(2, 2, 2, 0.1);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      margin: 0 5px;
+      padding: 8px;
+      border-radius: 49%;
+    }
+  }
+  .col-12:first-child {
+    .cart-item {
+      border-radius: 12px 12px 0 0;
+      @media (max-width: 767px) {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .col-12 {
+    padding: 0;
+  }
+  .price-card-wrapper {
+    @media (max-width: 767px) {
+      position: fixed;
+      bottom: 0;
+    }
+    .price-card {
+      padding: 25px 15px;
+      background: #fff;
+      @media (min-width: 768px) {
+        padding: 15px;
+      }
+      .text-wrapper {
+        padding: 15px 0;
+      }
+    }
+  }
+}
+
+section#success {
+  background: #fff;
+  min-height: 100vh;
+  img{
+    max-width: unset;
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+  }
+}
