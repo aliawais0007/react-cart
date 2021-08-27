@@ -16,7 +16,9 @@ export const NavBar = () => {
       <div className={"container-fluid"}>
         <div className={"row justify-content-between"}>
           <div className="col-5">
-            <a onClick={() => history.push("")}>Bakery</a>
+            <span className={"logo"} onClick={() => history.push("")}>
+              Bakery
+            </span>
           </div>
           <div className="col-5">
             <div className={"logo-section"}>

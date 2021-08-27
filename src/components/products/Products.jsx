@@ -14,23 +14,26 @@ export const Products = () => {
   const [cartItems, setCartItems] = useState(null);
   const { setCount, setMyCart } = useCartContext();
 
-  useEffect(async () => {
-    const API_KEY = API_GET_ITEMS;
-    try {
-      const response = await fetch(API_KEY);
-      const data = await handleResponse(response);
-      if (data.storage?.length > 0) {
-        setProducts(data.storage);
-        setFilterdItems(data.storage);
-      } else {
-        toast.info("No item available");
+  useEffect(() => {
+    async function getProducts() {
+      const API_KEY = API_GET_ITEMS;
+      try {
+        const response = await fetch(API_KEY);
+        const data = await handleResponse(response);
+        if (data.storage?.length > 0) {
+          setProducts(data.storage);
+          setFilterdItems(data.storage);
+        } else {
+          toast.info("No item available");
+        }
+      } catch (error) {
+        toast.error("Error: API failed to fetch Items!");
       }
-    } catch (error) {
-      toast.error("Error: API failed to fetch Items!");
-    }
 
-    setLocalCart(setCount, setMyCart, setCartItems);
-  }, []);
+      setLocalCart(setCount, setMyCart, setCartItems);
+    }
+    getProducts();
+  }, [setCount, setMyCart]);
 
   const setCart = (item) => {
     item.quantity = 1;

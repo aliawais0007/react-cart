@@ -57,7 +57,7 @@ section#navbar {
   @media (max-width: 767px) {
     padding: 0 20px;
   }
-  a {
+  span.logo {
     font-size: 46px;
     line-height: 56px;
     font-weight: 600;
@@ -163,6 +163,10 @@ section#products {
       padding: 30px 15px;
       justify-content: center;
       align-items: center;
+    }
+    &.out-stock {
+      opacity: 0.5;
+      pointer-events: none;
     }
     img {
       height: 80%;
@@ -312,7 +316,7 @@ section#cart {
 section#success {
   background: #fff;
   min-height: 100vh;
-  img{
+  img {
     max-width: unset;
     @media (max-width: 767px) {
       max-width: 100%;

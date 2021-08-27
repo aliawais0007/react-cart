@@ -4,7 +4,7 @@ export const Item = ({ item, setCart }) => {
     ".png");
   return (
     <div className={"col-12"}>
-      <div className={"cart-item"}>
+      <div className={item.stock > 1 ? "cart-item" : "out-stock cart-item"}>
         <img src={src.default} alt={item.name} />
         <div className={"d-flex flex-column align-items-center"}>
           <span className={"product-name"}>{item.name}</span>
@@ -12,7 +12,6 @@ export const Item = ({ item, setCart }) => {
         </div>
         <button onClick={() => setCart(item)}>Add to Cart</button>
       </div>
-      
     </div>
   );
 };

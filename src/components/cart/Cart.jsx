@@ -18,7 +18,7 @@ export const Cart = () => {
   useEffect(() => {
     // Set initial State of component
     setLocalCart(setCount, setMyCart, setCartItems, setTotalPrice);
-  }, [setCount]);
+  }, [setCount, setMyCart]);
 
   // Increment Cart Quantity function
   const cartPlus = (item) => {
@@ -30,7 +30,7 @@ export const Cart = () => {
         if (element.quantity === element.stock) {
           toast.error("No More Stock Available");
           isStockAvailable = false;
-          return;
+          return 0;
         } else {
           if (element.stock - element.quantity === 1) {
             toast.info("No More Items In Stock");
