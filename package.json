@@ -2,8 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
-  "homepage": "http://gitname.github.io/react-cart",
+  "homepage": "http://aliawais0007.github.io/react-cart",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -25,7 +24,7 @@
     "scss:prefix": "postcss ./src/App.scss -o ./src/custom.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "gh-pages -d build",
+    "deploy": "bash ./scripts/deploy.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
