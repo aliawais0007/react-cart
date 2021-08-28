@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Project is a demo React JS cart built on React.js@^17.0.2. with test TEST API's on NODE.js which is set to accept request from all origins.
 
-## Available Scripts
+## Start App
 
-In the project directory, you can run:
+1. Clone Repositry
+2. run **npm i**
+3. open **postcss.config.js** file in main directory 
+* ctrl click postcss-pxtorem
+* In defaults object change proplist as -> **propList: ["*"]**
+4. run **npm start** to start project locally
 
-### `yarn start`
+### Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In this app you will have following features,
+1. View Products page.
+2. Disabled products if there is no stock left.
+3. Add to Cart option.
+4. Add cart items to Localstorage for saving current state.
+5. Context API to share current Sart Items and Cart Item count accross all components.
+6. Basic JS search option.
+7. View Cart Items page.
+8. Clear cart Feature.
+9. Increment Quantity.
+10. Decrement Quantity.
+11. Total price Calculation.
+12. Place order.
+13. Order placed Success page.
+14. **Responsive layout** for any screen 4k,8k,10k
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Use Cases handled 
+In this app following use cases are being handled.
+1. can not order more then available stock.
+2. Order now button action change based on cart length.
+3. On decrement quantity Remove from cart if only one item is available.
 
-### `yarn test`
+##### Plugin used for optimization and beautification
+1. **scss** preprocessor 
+2. **Postcss** for ->
+* **Pxtorem** for responsive layout.
+* **autoprefix** for browser compatibility.
+3. **React-toastify** for error and info messages.
+4. **React Router** for routing.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###### Directories and component structure
+1. components folder which includes directory for each page.
+2. In **src** directory **utils.js** for reuseable helper functions.
+3. In main directory **postcss.config.js** for postcss modules.
+4. css file being used is **custom.css** in **src** directory which is generated from **App.scss**.
+5. API routes are configured in **consts.js** in src directory.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
