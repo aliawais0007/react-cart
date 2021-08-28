@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3000",
   "homepage": "https://aliawais0007.github.io/react-cart/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
