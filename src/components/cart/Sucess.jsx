@@ -9,9 +9,9 @@ export const Success = () => {
           <div className={"col-12 col-md-9"}>
             <h2 className={"my-3"}>Order Received</h2>
             <img
-              className={"d-block mx-auto"}
+              className={"d-block mx-auto my-4"}
               alt="Success"
-              src={require("../../assets/images/success.png").default}
+              src={require("../../assets/images/fireworks.png").default}
             />
             <h1 className={"text-center"}>Thank You!</h1>
             <p className={"text-center my-3"}>

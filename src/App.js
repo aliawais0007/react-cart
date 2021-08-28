@@ -24,7 +24,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Products />
-          </Route>
+          </Route> 
           <Route path="/cart" exact>
             <Cart />
           </Route>
