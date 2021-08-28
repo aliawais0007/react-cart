@@ -49,4 +49,5 @@ In this app following use cases are being handled.
 3. In main directory **postcss.config.js** for postcss modules.
 4. css file being used is **custom.css** in **src** directory which is generated from **App.scss**.
 5. API routes are configured in **consts.js** in src directory.
+6. Context API is located in **components/context** directory
 
