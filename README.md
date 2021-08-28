@@ -2,6 +2,8 @@
 
 This Project is a demo React JS cart built on React.js@^17.0.2. with test TEST API's on NODE.js which is set to accept request from all origins.
 
+**Demo preview** https://aliawais0007.github.io/react-cart/
+
 ## Start App
 
 1. Clone Repositry
