@@ -22,13 +22,13 @@ function App() {
     <CartProvider>
       <Router>
         <Switch>
-          <Route path="/" exact={true}>
+          <Route path="/" exact>
             <Products />
           </Route>
-          <Route path="/cart" exact={true}>
+          <Route path="/cart" exact>
             <Cart />
           </Route>
-          <Route path="/cart/success" exact={true}>
+          <Route path="/cart/success" exact>
             <Success />
           </Route>
         </Switch>
